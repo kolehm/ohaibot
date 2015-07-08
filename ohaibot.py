@@ -19,6 +19,7 @@ try:
 except:
     print("You must create a config.py file with your bot token in it!")
 
+# Bot settings
 logging.basicConfig(filename='ohaibot.log',
                     format='%(asctime)s %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
@@ -28,6 +29,11 @@ bot_url = 'https://api.telegram.org/bot' + token + '/'
 offset_file = 'offset.txt'
 update_id = 0
 global config
+
+# Cache settings, default creates cache in var
+cache = '/var/cache/ohhaibot'
+if not os.path.exists(cache):
+    os.makedirs(cache)
 
 # Map of keywords to URLs, used for static content (non-searched)
 keyword_map = { 'cantbrain': 'https://dl.dropboxusercontent.com/u/11466/meme/cantbrain.jpg',
@@ -158,11 +164,11 @@ def image_search(search_term):
 def download_file(url):
     file_name = url.split('/')[-1]
     ua = UserAgent()
-    # todo create cache folder if it does not already exist.
-    cache_folder = 'cache'
-    if os.path.isfile(os.path.join(cache_folder, file_name)):
+
+	# Grab file unless it already exists in cache
+    if os.path.isfile(os.path.join(cache, file_name)):
         logging.info('File already exists, skipping download')
-        return os.path.join(cache_folder, file_name)
+        return os.path.join(cache, file_name)
     else:
         logging.info("Downloading %s" % url)
         response = None
@@ -183,7 +189,7 @@ def download_file(url):
             fail = True
         del response
         if not fail:
-            file_path = os.path.join(cache_folder, file_name)
+            file_path = os.path.join(cache, file_name)
             logging.info("Downloaded %s" % file_path)
             return file_path
         else:
