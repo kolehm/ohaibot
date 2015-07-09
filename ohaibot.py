@@ -17,7 +17,7 @@ import yaml
 try:
     from config import token
 except:
-    print("You must create a config.py file with your bot token in it!")
+    print("You must add your bot API token to the ohaibot.yml file!")
 
 # Bot settings
 logging.basicConfig(filename='ohaibot.log',

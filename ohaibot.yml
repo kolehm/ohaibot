@@ -1,0 +1,31 @@
+---
+# ohaibot configuration
+
+# Telegram API token, YOU MUST EDIT THIS!
+token: apiGoesHere
+
+# Location of cache
+cache: /var/cache/ohaibot
+
+# Keyword dict
+keyword:
+	cantbrain: https://dl.dropboxusercontent.com/u/11466/meme/cantbrain.jpg
+	fixit: https://dl.dropboxusercontent.com/u/11466/gifs/fixit.gif
+	trololo: https://dl.dropboxusercontent.com/u/11466/meme/trolololo.jpg
+	noideadog: https://dl.dropboxusercontent.com/u/11466/meme/ihavenoidea.jpg
+	afraidtoask: https://dl.dropboxusercontent.com/u/11466/meme/noideaafraidtoask.jpg
+	climbingnope: https://dl.dropboxusercontent.com/u/11466/meme/towerclimbing.gif
+	nopenopenope: https://dl.dropboxusercontent.com/u/11466/gifs/nopenopenope.gif
+	ketchup: https://dl.dropboxusercontent.com/u/11466/gifs/ketchup.gif
+	lastf: https://dl.dropboxusercontent.com/u/11466/gifs/last_f.gif
+	deadhorse: https://dl.dropboxusercontent.com/u/11466/gifs/beatADeadHorse.gif
+	billandsteve: https://dl.dropboxusercontent.com/u/11466/gifs/billandsteve.gif
+	duckno: https://dl.dropboxusercontent.com/u/11466/gifs/duckno.gif
+	frakthis: https://dl.dropboxusercontent.com/u/11466/gifs/frakthisfrakthat.gif
+	why: https://dl.dropboxusercontent.com/u/11466/gifs/WHY.gif
+	sillywalknope: https://dl.dropboxusercontent.com/u/11466/gifs/SillyWalkNope.gif
+	sure: https://dl.dropboxusercontent.com/u/11466/gifs/sure_i_tested_it.gif
+	maxpower: https://dl.dropboxusercontent.com/u/11466/meme/maxpower.jpg
+	rustled: https://dl.dropboxusercontent.com/u/11466/meme/jimmiesrustled.png
+	overrustled: https://dl.dropboxusercontent.com/u/11466/meme/jimmiesrustledmaximum.jpg
+	random: http://www.reddit.com/r/random
